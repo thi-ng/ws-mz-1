@@ -3,7 +3,7 @@
    [hiccup.core :as hiccup]
    [thi.ng.geom.svg.core :as svg]))
 
-(println 42 3.1415926 1/3)
+;; (println 42 3.1415926 1/3)
 
 ;; REPL = Read, Evaluate, Print, Loop
 
@@ -38,4 +38,24 @@
        (map (fn [p] (apply svg/line p)) (concat v-lines h-lines))])))
 
 ;; (grid 5 10)
-;; (spit "grid2x2.svg" (svg/serialize (grid 2 2)))
+(spit "grid.svg" (svg/serialize (grid 2 20)))
+
+(defn layout
+  [width height margin gutter num-cols]
+  (let [c (/ (- width (* 2 margin) (* (- num-cols 1) gutter))
+             num-cols)
+        xcoords (concat [0 margin]
+                 (interpose gutter (repeat num-cols c))
+                 [margin])
+        xcoords (reductions + xcoords)
+        vlines  (map (fn [x] [[x 0] [x height]]) xcoords)]
+        (svg/svg
+         {:width width :height height}
+         [:g {:stroke "red" :stroke-width 1}
+           (map (fn [p] (apply svg/line p)) vlines)])))
+
+(spit "a4-6cols.svg" (svg/serialize (layout 210 297 20 5 6)))
+
+(->> (layout 210 297 20 5 6)
+     (svg/serialize)
+     (spit "a4-6cols.svg"))
