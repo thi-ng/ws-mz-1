@@ -1,5 +1,7 @@
 * ws-mz-1
 
+Clojure/ClojureScript workshop @ HS Mainz (June 2016)
+
 ** Resources
 
 - http://clojure.org/
@@ -9,6 +11,7 @@
 
 - https://cider.readthedocs.io/
 - https://cursive-ide.com/
+- [[https://gist.github.com/jasongilman/d1f70507bed021b48625][Atom editor & Clojure setup]]
 
 - https://www.conj.io/
 - http://clojuredocs.org/
@@ -21,7 +24,7 @@
 
 ** License
 
-Copyright © 2015 Karsten Schmidt
+Copyright © 2016 Karsten Schmidt
 
 Distributed under the Apache Software License either version 1.0 or (at
 your option) any later version.
