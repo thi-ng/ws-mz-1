@@ -46,6 +46,6 @@
  (map-airports "rgba(0,255,255,0.5)" map-width map-height 0.8 (filter (complement :iata_code) data/airports))
  (map-airports "rgba(255,0,255,0.5)" map-width map-height 0.8 (filter :iata_code data/airports)))
 
-#_(airport-map
+(airport-map
  "airports-us.svg" map-width map-height
  (map-airports "rgba(255,0,0,1.0)" map-width map-height 0.8 (filter #(= "US" (:iso_country %)) data/airports)))
