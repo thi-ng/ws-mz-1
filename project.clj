@@ -7,6 +7,7 @@
                  [org.clojure/clojurescript "1.8.51"]
                  [org.clojure/data.csv "0.1.3"]
                  [thi.ng/geom "0.0.1158-SNAPSHOT"]
+                 [thi.ng/validate "0.1.3"]
                  [reagent "0.6.0-alpha2"]]
 
   :plugins      [[lein-figwheel "0.5.0-6"]
