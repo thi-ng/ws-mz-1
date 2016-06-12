@@ -1,9 +1,9 @@
-(ns ex02.svgmap
+(ns day2.ex02.svgmap
   (:require
    [thi.ng.geom.core :as g]
    [thi.ng.geom.svg.core :as svg]
-   [ex02.csv :as data]
-   [ex02.mercator :as proj]))
+   [day2.ex02.csv :as data]
+   [day2.ex02.mercator :as proj]))
 
 ;; map image size
 (def map-width 1029)

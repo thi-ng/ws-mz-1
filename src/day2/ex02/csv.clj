@@ -1,4 +1,4 @@
-(ns ex02.csv
+(ns day2.ex02.csv
   (:require
    [clojure.java.io :as io]
    [clojure.data.csv :as csv]
@@ -59,7 +59,9 @@
         airports  (remove #(> (Math/abs (:latitude_deg %)) 88) airports)]
     airports))
 
-#_(def airports
+(def airports
   (load-airports
    (io/resource "airports.csv")
-   #{"name" "latitude_deg" "longitude_deg" "iso_country" "iata_code"}))
+   #{"name" "latitude_deg"
+     "longitude_deg" "iso_country"
+     "iata_code"}))

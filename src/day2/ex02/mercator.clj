@@ -1,4 +1,4 @@
-(ns ex02.mercator
+(ns day2.ex02.mercator
   (:require
    [thi.ng.geom.core :as g]
    [thi.ng.geom.vector :refer [vec2]]
